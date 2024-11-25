@@ -7,9 +7,9 @@ const PORT = process.env.PORT || 8090
 const app = express();
 app.use(express.json())
 
-// app.get("/",(req,res)=>{
-//     res.send("This is User Authentication API");
-// })
+app.get("/",(req,res)=>{
+    res.send("This is User Authentication API");
+})
 app.use("/api",userRoute)
 
 app.listen(PORT, () => {
